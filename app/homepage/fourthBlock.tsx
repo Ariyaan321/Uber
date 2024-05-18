@@ -1,19 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
-import Second from './images/second.webp'
+import Fourth from './images/fourth.webp'
 
-const secondBlock = () => {
+const fourthBlock = () => {
     return (
         <>
-
-            {/* Second block */}
             <div className='w-full h-[680px] bg-white border-solid border-2 border-purple-900 px-[64px] py-[64px] content-center flex justify-center'>
                 <div className='flex flex-row-reverse items-center justify-between w-[1140px] h-[555px]'>
-                    <div className='w-[454px] h-[383px] flex-col flex justify-between'> {/* right side */}
+                    <div className='w-[454px] h-[240px] flex-col flex justify-between border-solid border-2 border-red-800'> {/* right side */}
                         <div className='border-solid border-3 border-yellow-300'> {/* Upper part aka 1st half */}
-                            <div className='h-[191px]'>
-                                <h1 className='text-[52px] font-bold leading-tight text-black'>Drive when you want, make what you need</h1>
-                                <p className='h-max text-[16px] text-black font-normal leading-6 mt-8'>Make money on your schedule with deliveries or rides—or<br /> both. You can use your own car or choose a rental <br /> through Uber.</p>
+                            <div className='h-[191px] border-solid border-2 border-green-800 flex flex-col pb-6'>
+                                <h1 className='text-[36px] font-bold leading-tight text-black'>Make money by renting out your car</h1>
+                                <p className='h-max text-[16px] text-black font-normal leading-6'>Connect with thousands of drivers and earn more per week with Uber’s free fleet management tools.</p>
                             </div>
                         </div> {/* 1st upper half end */}
 
@@ -23,14 +21,14 @@ const secondBlock = () => {
                                 <a href="/" className='text-white h-fit'>Get started</a>
                             </div>
 
-                            <div className='items-end h-fit'>
+                            {/* <div className='items-end h-fit'>
                                 <span className='text-black cursor-pointer'>
                                     Already have an account? Sign in
                                     <div className='w-30 h-1 bg-gray-200 rounded-3xl'></div>
                                     <div className='w-30 h-1 rounded-3xl hover:{before:bg-grey-200 after:bg-black}'></div>
 
                                 </span>
-                            </div>
+                            </div> */}
                         </div> {/*2nd half end*/}
 
 
@@ -39,7 +37,7 @@ const secondBlock = () => {
                     {/* Right Side : Image */}
                     <div className=''>
                         <Image
-                            src={Second}
+                            src={Fourth}
                             width={552}
                             height={552}
                             alt="Second picture"
@@ -48,13 +46,8 @@ const secondBlock = () => {
 
                 </div>
             </div>
-
-
         </>
     )
 }
 
-
-
-
-export default secondBlock;
+export default fourthBlock

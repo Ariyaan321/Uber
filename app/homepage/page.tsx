@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import First from './images/first.webp'
+import Third from './images/third.webp'
+import Fourth from './images/fourth.webp'
 import SecondBlock from './secondBlock'
+import FourthBlock from './fourthBlock'
+import GeneralBlock from './generalBlock'
 
 const homepage = () => {
 
@@ -22,7 +26,7 @@ const homepage = () => {
                             </div>
                             <div className='h-[191px] border-solid border-2 border-red-400 mt-2'>  {/* Down Part aka 2nd half */}
 
-                                <div className='w-[396px] h-[47px] bg-white rounded-lg flex border-solid border-4 border-red-600'> {/* Enter location : hold 3 elems -> 1svg , 1 i/p , 1svg */}
+                                <div className='w-[396px] h-[47px] bg-white rounded-lg flex border-solid border-4 border-red-600'> {/* Enter location : hold 3 elems -> 1svg , 1i/p , 1svg */}
                                     <div className='ml-3'>
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm5-2a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="currentColor"></path></svg>
                                     </div>
@@ -63,7 +67,7 @@ const homepage = () => {
                                 src={First}
                                 width={552}
                                 height={552}
-                                alt="Picture of the author"
+                                alt="First picture"
                             />
                         </div>
 
@@ -74,6 +78,41 @@ const homepage = () => {
                 {/* Second Block */}
                 <SecondBlock />
 
+
+                {/* Third Block */}
+                <GeneralBlock
+                    heading={"The Uber you know, reimagined for business"}
+                    paras={"Uber for Business is a platform for managing global rides and meals, and local deliveries, for companies of any size."}
+                    linkBar={"Check out our solutions"}
+                    picture={Third}
+                    TrowRev={false}
+                    Tfstc={'text-[52px] text-GG'}
+                    Theight={'h-[383px]'}
+                    Tmt={'mt-7'}
+                    TupperHalf={''}
+                />
+
+
+                {/* <FourthBlock /> */}
+                {/* Change Fourth block Style then try */}
+                <GeneralBlock
+                    heading={"Make money by renting out your car"}
+                    paras={"Connect with thousands of drivers and earn more per week with Uber’s free fleet management tools."}
+                    linkBar={''}
+                    picture={Fourth}
+                    TrowRev={true}
+                    Tfstc={'text-[36px] text-black'}
+                    Theight={'h-[240px]'}
+                    Tmt={''}
+                    TupperHalf={'flex flex-col pb-6'}
+                />
+                {/* <ThirdBlock
+                    heading={"Make money by renting out your car"}
+                    paras={"Connect with thousands of drivers and earn more per week with Uber’s free fleet management tools."}
+                    picture={Fourth}
+                    rowRev={true}
+                    fstc={'text-[36px] text-black'}
+                /> */}
 
             </div>
         </>

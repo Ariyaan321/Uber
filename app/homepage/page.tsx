@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Navbar from './navbar'
 import First from './images/first.webp'
 import Second from './images/second.webp'
 import Third from './images/third.webp'
@@ -12,7 +13,7 @@ const homepage = () => {
     return (
         <>
             <div>
-                {/* Navbar will come here */}
+                <Navbar />
 
                 {/* first block : "Go anywhere with Uber" */}
                 <div className='w-full h-[680px] bg-black px-[64px] py-[64px] content-center flex justify-center'>
@@ -21,7 +22,7 @@ const homepage = () => {
                             <div className='h-[191px]'> {/* Upper part aka 1st half */}
                                 <div className='h-[191px] flex flex-col justify-center'>
                                     <h1 className='text-[52px] font-bold leading-tight text-white'>Go anywhere with Uber</h1>
-                                    <p className='content-end text-[16px] text-white font-normal'>Request a ride, hop in, and go.</p>
+                                    <p className='content-end mb-2 text-[16px] text-white font-normal'>Request a ride, hop in, and go.</p>
                                 </div>
                             </div>
                             <div className='h-[191px] mt-2'>  {/* Down Part aka 2nd half */}
@@ -31,8 +32,8 @@ const homepage = () => {
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm5-2a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="currentColor"></path></svg>
                                     </div>
 
-                                    <div className='ml-1.2 w-full'>
-                                        <input className='w-full text-[17px]' type="text" placeholder='Enter location' />
+                                    <div className='ml-2 w-full'>
+                                        <input className='w-full text-[17px] text-placehol placeholder:text-placehol' type="text" placeholder='Enter location' />
                                     </div>
 
                                     <div className='ml-auto mr-3'>
@@ -40,7 +41,7 @@ const homepage = () => {
                                     </div>
                                 </div>
 
-                                <div className='absolute bg-white h-[20px] w-[1px] ml-6 ' />
+                                <div className='absolute bg-white h-[20px] w-[1px] ml-5 ' />
 
                                 {/*2nd input */}
                                 <div className='w-[396px] h-[47px] mt-[12px] bg-white rounded-lg flex'> {/* Enter destination : hold 2 elems -> 1svg , 1 i/p*/}
@@ -48,13 +49,13 @@ const homepage = () => {
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M14 10h-4v4h4v-4ZM7 7v10h10V7H7Z" fill="currentColor"></path></svg>
                                     </div>
 
-                                    <div className='ml-1.2 w-full'>
-                                        <input className='w-full text-[17px]' type="text" placeholder='Enter destination' />
+                                    <div className='ml-2 w-fit'>
+                                        <input className='w-full text-[17px] placeholder:text-placehol' type="text" placeholder='Enter destination' />
                                     </div>
                                 </div>
 
                                 {/*Button ( Link! <a />)- see prices */}
-                                <div className='w-[127px] h-[48px] mt-[16px] rounded-lg bg-white flex justify-center'>
+                                <div className='w-[127px] h-[48px] mt-[25px] rounded-lg bg-white flex justify-center'>
                                     <a href="/" className='text-black  text-[16px] font-medium content-center'>See prices</a>
                                 </div>
 

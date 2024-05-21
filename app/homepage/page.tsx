@@ -1,13 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
 import Navbar from './navbar'
-import { AFirstBlock } from './animations'
+import AFirstBlock from './firstBlock'
 import Second from './images/second.webp'
 import Third from './images/third.webp'
 import Fourth from './images/fourth.webp'
 import Fifth from './images/fifth.webp'
 import GeneralBlock from './generalBlock'
-import PageWrapper from './pageWrapper'
 
 const homepage = () => {
 

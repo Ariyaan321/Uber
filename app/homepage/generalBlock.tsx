@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import PageWrapper from './pageWrapper';
+import { TextRevealAnim, ImageReveal } from './animations';
 
 // Define the prop types for the component
 interface GeneralBlockProps {
@@ -24,9 +24,9 @@ const GeneralBlock: React.FC<GeneralBlockProps> = ({ heading, paras, linkBar = '
 
             {/* Second block */}
             <div className='w-full h-[680px] bg-white px-[64px] py-[64px] content-center flex justify-center'>
-                <PageWrapper>
-                    <div className={`flex ${TrowRev && 'flex-row-reverse'} items-center justify-between w-[1140px] h-[555px]`}>
-                        <div className={`w-[454px] ${Theight} flex-col flex justify-between border-solid border-2 border-red-700`}> {/* right side */}
+                <div className={`flex ${TrowRev && 'flex-row-reverse'} items-center justify-between w-[1140px] h-[555px]`}>
+                    <TextRevealAnim leftRight={TrowRev}>
+                        <div className={`w-[454px] ${Theight} flex-col flex justify-between`}> {/* right side */}
                             <div className='border-solid border-3 border-yellow-300'> {/* Upper part aka 1st half */}
                                 <div className={`h-[191px] ${TupperHalf}`}>
                                     <h1 className={`${Tfstc} font-bold leading-tight`}>{heading}</h1>   {/* fontSize and Textcolor : changes*/}
@@ -55,8 +55,10 @@ const GeneralBlock: React.FC<GeneralBlockProps> = ({ heading, paras, linkBar = '
 
 
                         </div>
+                    </TextRevealAnim>
 
-                        {/* Right Side : Image */}
+                    {/* Right Side : Image */}
+                    <ImageReveal leftRight={TrowRev}>
                         <div className=''>
                             <Image
                                 src={picture}
@@ -65,9 +67,9 @@ const GeneralBlock: React.FC<GeneralBlockProps> = ({ heading, paras, linkBar = '
                                 alt="general picture"
                             />
                         </div>
-                    </div>
-                </PageWrapper>
-            </div>
+                    </ImageReveal>
+                </div>
+            </div >
 
         </>
     )

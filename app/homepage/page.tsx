@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from './navbar'
+import FooterHome from './footerHome'
 import AFirstBlock from './firstBlock'
+import GeneralBlock from './generalBlock'
 import Second from './images/second.webp'
 import Third from './images/third.webp'
 import Fourth from './images/fourth.webp'
 import Fifth from './images/fifth.webp'
-import GeneralBlock from './generalBlock'
 
 const homepage = () => {
 
@@ -81,6 +82,8 @@ const homepage = () => {
                     button={"Watch the event"}
                     TspecialCaseWMB={'w-[173px] mb-[-10px]'}
                 />
+
+                <FooterHome />
             </div>
         </>
     )

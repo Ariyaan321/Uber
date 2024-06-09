@@ -59,3 +59,21 @@ export const ImageReveal: FC<MyProps> = ({ children, leftRight = false }) => {
     </>
   )
 }
+
+export const FooterAnim: FC<MyProps> = ({ children }) => {
+  return (
+    <>
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, translateY: -20 }}
+          viewport={{ amount: 0.4, once: true }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 1 }}
+
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence >
+    </>
+  )
+}
